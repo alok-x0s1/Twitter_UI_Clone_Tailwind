@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Twitter Clone</title>
+    <link rel="shortcut icon" href="./Images/logo.svg" type="image/x-icon">
+    <link
+    rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..500,0..1,-50..200"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+    href="https://fonts.googleapis.com/css2?family=Poppins&family=Roboto&display=swap"
+    rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./src/output.css" />
+  </head>
+  <style>
+    body {
+      font-family: "poppins", sans-serif;
+      background-color: #000;
+      color: #fff;
+      height: 100vh;
+    }
+
+    .body::-webkit-scrollbar {
+      display: none;
+    }
+  </style>
+  <body>
+    <div
+      class="relative main-container w-full max-h-screen flex justify-center"
+    >
+      <div class="first max-w-[265px] min-h-screen px-5 hidden sm:block">
+        <div class="p-3 hover:bg-[#181818] rounded-[45px] hover:transition-all duration-500 cursor-pointer w-fit mb-[1px]">
+            <div class="logo w-7 invert">
+              <svg
+              viewBox="0 0 24 24"
+              aria-hidden="true"
+              class="r-4qtqp9 r-yyyyoo r-dnmrzs r-bnwqim r-1plcrui r-lrvibr r-lrsllp r-1nao33i r-16y2uox r-8kz0gk"
+            >
+              <g>
+                <path
+                  d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"
+                ></path>
+              </g>
+            </svg>
+              </div>
+        </div>
+        <div class="sticky top-0">
+          <ul class="flex flex-col gap-[2px]">
+            <li class="text-2xl flex gap-3 items-center p-3 hover:bg-[#181818] rounded-[45px] hover:transition-all duration-500 w-fit cursor-pointer font-semibold">
+              <span class="material-symbols-outlined" style="font-size: 30px"
+                >home</span
+              >
+              <span class="hidden lg:block">Home</span>
+            </li>
+            <li class="text-xl flex gap-3 items-center p-3 hover:bg-[#181818] rounded-[45px] hover:transition-all duration-500 w-fit cursor-pointer">
+              <span class="material-symbols-outlined" style="font-size: 30px"
+                >search</span
+              >
+              <span class="hidden lg:block">Explore</span>
+            </li>
+            <li class="text-xl flex gap-3 items-center p-3 hover:bg-[#181818] rounded-[45px] hover:transition-all duration-500 w-fit cursor-pointer">
+              <span class="material-symbols-outlined" style="font-size: 30px"
+                >notifications</span
+              >
+              <span class="hidden lg:block">Notifications</span>
+              
+            </li>
+            <li class="text-xl flex gap-3 items-center p-3 hover:bg-[#181818] rounded-[45px] hover:transition-all duration-500 w-fit cursor-pointer">
+              <span class="material-symbols-outlined" style="font-size: 30px"
+                >mail</span
+              >
+              <span class="hidden lg:block">Messages</span>
+              
+            </li>
+            <li class="text-xl flex gap-3 items-center p-3 hover:bg-[#181818] rounded-[45px] hover:transition-all duration-500 w-fit cursor-pointer">
+              <span class="material-symbols-outlined" style="font-size: 30px"
+                >box</span
+              >
+              <span class="hidden lg:block">Grok</span>
+              
+            </li>
+            <li class="text-xl flex gap-3 items-center p-3 hover:bg-[#181818] rounded-[45px] hover:transition-all duration-500 w-fit cursor-pointer">
+              <span class="material-symbols-outlined" style="font-size: 30px"
+                >list_alt</span
+              >
+              <span class="hidden lg:block">Lists</span>
+              
+            </li>
+            <li class="text-xl flex gap-3 items-center p-3 hover:bg-[#181818] rounded-[45px] hover:transition-all duration-500 w-fit cursor-pointer">
+              <span class="material-symbols-outlined" style="font-size: 30px"
+                >license</span
+              >
+              <span class="hidden lg:block">Premium</span>
+              
+            </li>
+            <li class="text-xl flex gap-3 items-center p-3 hover:bg-[#181818] rounded-[45px] hover:transition-all duration-500 w-fit cursor-pointer">
+              <span class="material-symbols-outlined" style="font-size: 30px"
+                >person</span
+              >
+              <span class="hidden lg:block">Profile</span>
+              
+            </li>
+            <li class="text-xl flex gap-3 items-center p-3 hover:bg-[#181818] rounded-[45px] hover:transition-all duration-500 w-fit cursor-pointer">
+              <span class="material-symbols-outlined" style="font-size: 30px"
+                >more_horiz</span
+              >
+              <span class="hidden lg:block">More</span>
+              
+            </li>
+            <li class="p-3 bg-blue-500 text-center rounded-[45px] text-base my-2 font-semibold hover:bg-opacity-90 cursor-pointer mr-6 hidden lg:block">Post</li>
+            <li class="px-3 py-2 bg-blue-500 text-center rounded-full text-base my-2 font-semibold hover:bg-opacity-90 cursor-pointer w-fit block lg:hidden"><span class="material-symbols-outlined">
+              history_edu
+              </span></li>
+            <div class="hidden lg:block">
+              <li class="text-xl flex gap-3 items-center px-4 py-3 hover:bg-[#181818] rounded-[45px] hover:transition-all duration-500 w-fit cursor-pointer mr-6">
+                <img src="./Images/profile.jpg" alt="profile" class="w-9 rounded-full">
+                <div class="mr-7">
+                    <h3 class="text-sm font-semibold">Alok Yadav</h3>
+                    <p class="text-sm opacity-50">@yadav69alok</p>
+                </div>
+                <span class="material-symbols-outlined" style="font-size: 25px">more_horiz</span>
+              </li>
+            </div>
+            <li class="block lg:hidden">
+              <img src="./Images/profile.jpg" alt="profile" class="w-12 cursor-pointer rounded-full">
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="second mb-2 max-w-[610px] h-full border-solid border-[1px] border-zinc-700">
+        <div class="top flex border-b border-zinc-700 text-xs lg:text-sm sticky top-0 bg-black backdrop-blur-3xl opacity-90">
+            <p class="p-4 w-1/4 hover:bg-[#181818] hover:transition-all duration-500 cursor-pointer font-semibold">For you</p>
+            <p class="p-4 w-1/4 hover:bg-[#181818] hover:transition-all duration-500 cursor-pointer font-semibold opacity-50">Following</p>
+            <p class="p-4 w-1/4 hover:bg-[#181818] hover:transition-all duration-500 cursor-pointer font-semibold opacity-50">Javascript</p>
+            <p class="p-4 w-1/4 hover:bg-[#181818] hover:transition-all duration-500 cursor-pointer font-semibold opacity-50">React</p>
+            <p class="px-4 pt-4 hover:bg-[#181818] hover:transition-all duration-500 cursor-pointer font-semibold">
+              <span class="material-symbols-outlined">settings</span>
+            </p>
+        </div>
+        <div class="hero p-4 flex flex-col gap-5 border-b border-zinc-700">
+          <div class="flex gap-3">
+            <img src="./Images/profile.jpg" alt="profile" class="w-10 h-10 rounded-full">
+            <input type="search" name="search" placeholder="What is happening ?!" class="bg-transparent border-none outline-none w-full text-lg">
+          </div>
+          <div class="icon text-blue-500 pl-12 flex justify-between">
+            <div class="flex gap-3 cursor-pointer">
+              <span class="material-symbols-outlined">image</span>
+              <span class="material-symbols-outlined">gif_box</span>
+              <span class="material-symbols-outlined">format_list_numbered</span>
+              <span class="material-symbols-outlined">mood</span>
+              <span class="material-symbols-outlined">pending_actions</span>
+              <span class="material-symbols-outlined">location_on</span>
+            </div>
+            <button class="bg-blue-500 px-3 py-1 text-white text-base rounded-full opacity-40">Post</button>
+          </div>
+        </div>
+        <div class="recent text-xl flex justify-center items-center p-4 hover:bg-[#080808] hover:transition-all duration-500 w-full cursor-pointer border-b border-zinc-700">
+          <p class="text-base text-[#1D8DD8]">Show 173 posts</p>
+      </div>
+      <div class="posts">
+        <ul>
+          <li class="text-xl flex flex-col gap-3 px-4 py-2 hover:bg-[#080808] hover:transition-all duration-500 w-full mr-6 border-b border-zinc-700">
+            <div class="post-top flex justify-between">
+              <div class="flex gap-3">
+                <img src="./Images/francesco.jpg" alt="profile" class="w-9 h-9 rounded-full">
+                <div class="mr-7">
+                  <div class="flex gap-1">
+                    <h3 class="text-xs lg:text-sm font-semibold hover:underline">Francesco</h3>
+                    <img src="./Images/bluetick.svg" alt="bluetick">
+                    <p class="text-xs lg:text-sm opacity-50">@FrancescoCiull4</p>
+                    <p class="text-xs lg:text-sm opacity-50">• 54m</p>
+                  </div>
+                  <p class="lg:text-sm text-xs">Would you learn Rust from someone who looks like this?</p>
+              </div>
+              </div>
+              <span class="material-symbols-outlined" style="font-size: 25px; opacity: 0.6;">more_horiz</span>
+            </div>
+            <div class="post-img ml-10">
+              <img src="./Images/post1.jpeg" alt="post" class="rounded-lg">
+              <div class="post-foot flex justify-between mt-2 cursor-pointer">
+                <span class="text-sm flex items-center hover:text-[#1d8dd8]"><span class="material-symbols-outlined text-xl px-2 py-1 rounded-full hover:bg-[#1d8dd838] hover:text-[#1d8dd8] opacity-50 hover:opacity-100">comment</span>2k</span>
+                <span class="material-symbols-outlined text-xl px-2 py-1 rounded-full hover:bg-[#1dd8652d] hover:text-[#1dd865] opacity-50 hover:opacity-100">forum</span>
+                <span class="material-symbols-outlined text-xl px-2 py-1 rounded-full hover:bg-[#f918812f] hover:text-[#F91880] opacity-50 hover:opacity-100">favorite</span>
+                <span class="material-symbols-outlined text-xl px-2 py-1 rounded-full hover:bg-[#55b1ef38] hover:text-[#1d8dd8] opacity-50 hover:opacity-100">bar_chart</span>
+                <span class="material-symbols-outlined text-xl px-2 py-1 rounded-full hover:bg-[#55b1ef38] hover:text-[#1d8dd8] opacity-50 hover:opacity-100">bookmark</span>
+                <span class="material-symbols-outlined text-xl px-2 py-1 rounded-full hover:bg-[#55b1ef38] hover:text-[#1d8dd8] opacity-50 hover:opacity-100">ios_share</span>
+              </div>
+            </div>
+          </li>
+          <li class="text-xl flex flex-col gap-3 px-4 py-2 hover:bg-[#080808] hover:transition-all duration-500 w-full mr-6 border-b border-zinc-700">
+            <div class="post-top flex justify-between">
+              <div class="flex gap-3">
+                <img src="./Images/hiteshSir.jpg" alt="profile" class="w-9 h-9 rounded-full">
+                <div class="mr-7">
+                  <div class="flex gap-1">
+                    <h3 class="text-xs lg:text-sm font-semibold hover:underline">Hitesh Choudhary</h3>
+                    <img src="./Images/bluetick.svg" alt="bluetick">
+                    <p class="text-xs lg:text-sm opacity-50">@Hiteshdotcom</p>
+                    <p class="text-xs lg:text-sm opacity-50">• 1d</p>
+                  </div>
+              </div>
+              </div>
+              <span class="material-symbols-outlined" style="font-size: 25px; opacity: 0.6;">more_horiz</span>
+            </div>
+            <div class="text">
+              <p class=" text-xs lg:text-sm ml-10">What magic is going on with <span class="text-[#1D8DD8]">@bunjavascript</span> ? It just works and that ridiculous fast? <br>Where can I read about internal architecture?</p>
+            </div>
+            <div class="post-foot cursor-pointer flex justify-between ml-10">
+              <span class="material-symbols-outlined text-xl px-2 py-1 rounded-full hover:bg-[#1d8dd838] hover:text-[#1d8dd8] opacity-50 hover:opacity-100">comment</span>
+              <span class="material-symbols-outlined text-xl px-2 py-1 rounded-full hover:bg-[#1dd8652d] hover:text-[#1dd865] opacity-50 hover:opacity-100">forum</span>
+              <span class="material-symbols-outlined text-xl px-2 py-1 rounded-full hover:bg-[#f918812f] hover:text-[#F91880] opacity-50 hover:opacity-100">favorite</span>
+              <span class="material-symbols-outlined text-xl px-2 py-1 rounded-full hover:bg-[#55b1ef38] hover:text-[#1d8dd8] opacity-50 hover:opacity-100">bar_chart</span>
+              <span class="material-symbols-outlined text-xl px-2 py-1 rounded-full hover:bg-[#55b1ef38] hover:text-[#1d8dd8] opacity-50 hover:opacity-100">bookmark</span>
+              <span class="material-symbols-outlined text-xl px-2 py-1 rounded-full hover:bg-[#55b1ef38] hover:text-[#1d8dd8] opacity-50 hover:opacity-100">ios_share</span>
+            </div>
+          </li>
+          <li class="text-xl flex flex-col gap-3 px-4 py-2 hover:bg-[#080808] hover:transition-all duration-500 w-full mr-6 border-b border-zinc-700">
+            <div class="post-top flex justify-between">
+              <div class="flex gap-3">
+                <img src="./Images/shefali.jpg" alt="profile" class="w-9 h-9 rounded-full">
+                <div class="mr-7">
+                  <div class="flex gap-1">
+                    <h3 class="text-xs lg:text-sm font-semibold hover:underline">Shefali</h3>
+                    <img src="./Images/bluetick.svg" alt="bluetick">
+                    <p class="text-xs lg:text-sm opacity-50">@Shefali__J</p>
+                    <p class="text-xs lg:text-sm opacity-50">• 2w</p>
+                  </div>
+              </div>
+              </div>
+              <span class="material-symbols-outlined" style="font-size: 25px; opacity: 0.6;">more_horiz</span>
+            </div>
+            <div class="text">
+              <p class="text-xs lg:text-sm ml-10">You are never too old to set another goal or to dream a new dream <br> <br>Good morning, everyone 🌻</p>
+            </div>
+            <div class="post-foot cursor-pointer flex justify-between ml-10">
+              <span class="material-symbols-outlined text-xl px-2 py-1 rounded-full hover:bg-[#1d8dd838] hover:text-[#1d8dd8] opacity-50 hover:opacity-100">comment</span>
+              <span class="material-symbols-outlined text-xl px-2 py-1 rounded-full hover:bg-[#1dd8652d] hover:text-[#1dd865] opacity-50 hover:opacity-100">forum</span>
+              <span class="material-symbols-outlined text-xl px-2 py-1 rounded-full hover:bg-[#f918812f] hover:text-[#F91880] opacity-50 hover:opacity-100">favorite</span>
+              <span class="material-symbols-outlined text-xl px-2 py-1 rounded-full hover:bg-[#55b1ef38] hover:text-[#1d8dd8] opacity-50 hover:opacity-100">bar_chart</span>
+              <span class="material-symbols-outlined text-xl px-2 py-1 rounded-full hover:bg-[#55b1ef38] hover:text-[#1d8dd8] opacity-50 hover:opacity-100">bookmark</span>
+              <span class="material-symbols-outlined text-xl px-2 py-1 rounded-full hover:bg-[#55b1ef38] hover:text-[#1d8dd8] opacity-50 hover:opacity-100">ios_share</span>
+            </div>
+          </li>
+          <li class="text-xl flex flex-col gap-3 px-4 py-2 hover:bg-[#080808] hover:transition-all duration-500 w-full mr-6 border-b border-zinc-700">
+            <div class="post-top flex justify-between">
+              <div class="flex gap-3">
+                <img src="./Images/francesco.jpg" alt="profile" class="w-9 h-9 rounded-full">
+                <div class="mr-7">
+                  <div class="flex gap-1">
+                    <h3 class="text-xs lg:text-sm font-semibold hover:underline">Francesco</h3>
+                    <img src="./Images/bluetick.svg" alt="bluetick">
+                    <p class="text-xs lg:text-sm opacity-50">@FrancescoCiull4</p>
+                    <p class="text-xs lg:text-sm opacity-50">• 2h</p>
+                  </div>
+                  <p class="text-xs lg:text-sm">35k on YT! Thank you!!!</p>
+              </div>
+              </div>
+              <span class="material-symbols-outlined" style="font-size: 25px; opacity: 0.6;">more_horiz</span>
+            </div>
+            <div class="post-img ml-10">
+              <img src="./Images/post2.jpeg" alt="post" class="rounded-lg">
+              <div class="post-foot cursor-pointer flex justify-between mt-2">
+                <span class="material-symbols-outlined text-xl px-2 py-1 rounded-full hover:bg-[#1d8dd838] hover:text-[#1d8dd8] opacity-50 hover:opacity-100">comment</span>
+                <span class="material-symbols-outlined text-xl px-2 py-1 rounded-full hover:bg-[#1dd8652d] hover:text-[#1dd865] opacity-50 hover:opacity-100">forum</span>
+                <span class="material-symbols-outlined text-xl px-2 py-1 rounded-full hover:bg-[#f918812f] hover:text-[#F91880] opacity-50 hover:opacity-100">favorite</span>
+                <span class="material-symbols-outlined text-xl px-2 py-1 rounded-full hover:bg-[#55b1ef38] hover:text-[#1d8dd8] opacity-50 hover:opacity-100">bar_chart</span>
+                <span class="material-symbols-outlined text-xl px-2 py-1 rounded-full hover:bg-[#55b1ef38] hover:text-[#1d8dd8] opacity-50 hover:opacity-100">bookmark</span>
+                <span class="material-symbols-outlined text-xl px-2 py-1 rounded-full hover:bg-[#55b1ef38] hover:text-[#1d8dd8] opacity-50 hover:opacity-100">ios_share</span>
+              </div>
+            </div>
+          </li>
+          <li class="text-xl flex cursor-pointer flex-col gap-3 px-4 py-2 hover:bg-[#080808] hover:transition-all duration-500 w-full mr-6 border-b border-zinc-700">
+            <div class="post-top flex justify-between">
+              <div class="flex gap-3">
+                <img src="./Images/hiteshSir.jpg" alt="profile" class="w-9 h-9 rounded-full">
+                <div class="mr-7">
+                  <div class="flex gap-1">
+                    <h3 class="text-xs lg:text-sm font-semibold hover:underline">Hitesh Choudhary</h3>
+                    <img src="./Images/bluetick.svg" alt="bluetick">
+                    <p class="text-xs lg:text-sm opacity-50">@Hiteshdotcom</p>
+                    <p class="text-xs lg:text-sm opacity-50">• 2d</p>
+                  </div>
+                  <p class="text-xs lg:text-sm">Graduation complete kr lena sabhi. Cool bnne ke chakkr me drop kiya to ab coaching me b job nhi lagegi. <br>
+                    Tech company b upr upr bolti h ki degree zruri nhi but kbhi reality check kro ki applicant ratio kya h, degree vs non degree and selection ratio.</p>
+              </div>
+              </div>
+              <span class="material-symbols-outlined" style="font-size: 25px; opacity: 0.6;">more_horiz</span>
+            </div>
+            <div class="post-img ml-10">
+              <img src="./Images/post3.jpeg" alt="post" class="rounded-lg">
+              <div class="post-foot flex justify-between mt-2">
+                <span class="material-symbols-outlined text-xl px-2 py-1 rounded-full hover:bg-[#1d8dd838] hover:text-[#1d8dd8] opacity-50 hover:opacity-100">comment</span>
+                <span class="material-symbols-outlined text-xl px-2 py-1 rounded-full hover:bg-[#1dd8652d] hover:text-[#1dd865] opacity-50 hover:opacity-100">forum</span>
+                <span class="material-symbols-outlined text-xl px-2 py-1 rounded-full hover:bg-[#f918812f] hover:text-[#F91880] opacity-50 hover:opacity-100">favorite</span>
+                <span class="material-symbols-outlined text-xl px-2 py-1 rounded-full hover:bg-[#55b1ef38] hover:text-[#1d8dd8] opacity-50 hover:opacity-100">bar_chart</span>
+                <span class="material-symbols-outlined text-xl px-2 py-1 rounded-full hover:bg-[#55b1ef38] hover:text-[#1d8dd8] opacity-50 hover:opacity-100">bookmark</span>
+                <span class="material-symbols-outlined text-xl px-2 py-1 rounded-full hover:bg-[#55b1ef38] hover:text-[#1d8dd8] opacity-50 hover:opacity-100">ios_share</span>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+      </div>
+      <div class="third max-w-[350px] ml-6 mb-2 pr-5 hidden md:block">
+        <div class="search-bar mt-1 bg-[#16181c] flex gap-1 items-center pl-4 rounded-full">
+            <span class="material-symbols-outlined" style="font-size: 25px; opacity: 0.6;">search</span>
+            <input type="search" name="search" placeholder="Search" class="bg-transparent border-none outline-none w-full p-3 text-base">
+        </div>
+        <div class="subscribe w-full p-4 bg-[#16181c] rounded-3xl mt-4">
+            <h3 class="text-xl font-semibold">Subscribe to premium</h3>
+            <p class="text-sm my-2 opacity-60">Subscribe to unlock new features and if eligible, receive a share of ads revenue.</p>
+            <button class="bg-blue-500 px-4 py-2 text-base rounded-full">Subscribe</button>
+        </div>
+        <div class="trending w-full bg-[#16181c] rounded-3xl mt-4 overflow-hidden">
+            <h3 class="text-lg font-semibold p-4">What's happening</h3>
+            <ul>
+                <li class="text-xl flex justify-between items-center px-4 py-3 hover:bg-[#1D1F23] hover:transition-all duration-500 w-full cursor-pointer mr-6">
+                    <div>
+                        <h3 class="text-sm font-semibold my-1">Menswear Fashion Weeks</h3>
+                        <p class="text-xs opacity-50">Fashion • LIVE</p>
+                    </div>
+                    <img src="./Images/trendingImg.jpeg" alt="trendingImg" class="w-[60px] h-[60px] rounded-xl">
+                </li>
+                <li class="text-xl flex justify-between items-center px-4 py-3 hover:bg-[#1D1F23] hover:transition-all duration-500 w-full cursor-pointer mr-6">
+                    <div>
+                        <p class="text-xs opacity-50">Entertainment • Trending</p>
+                        <h3 class="text-sm font-semibold my-1">#divorce</h3>
+                        <p class="text-xs opacity-50">1,940 posts</p>
+                    </div>
+                    <span class="material-symbols-outlined" style="font-size: 25px; opacity: 0.6;">more_horiz</span>
+                </li>
+                <li class="text-xl flex justify-between items-center px-4 py-3 hover:bg-[#1D1F23] hover:transition-all duration-500 w-full cursor-pointer mr-6">
+                    <div>
+                        <p class="text-xs opacity-50">Food • Trending</p>
+                        <h3 class="text-sm font-semibold my-1">#BoycottPizzaHut</h3>
+                        <p class="text-xs opacity-50">133k posts</p>
+                    </div>
+                    <span class="material-symbols-outlined" style="font-size: 25px; opacity: 0.6;">more_horiz</span>
+                </li>
+                <li class="text-xl flex justify-between items-center px-4 py-3 hover:bg-[#1D1F23] hover:transition-all duration-500 w-full cursor-pointer mr-6">
+                    <div>
+                        <p class="text-xs opacity-50">Trending in India</p>
+                        <h3 class="text-sm font-semibold my-1">Ayodha Ram Mandir</h3>
+                        <p class="text-xs opacity-50">123k posts</p>
+                    </div>
+                    <span class="material-symbols-outlined" style="font-size: 25px; opacity: 0.6;">more_horiz</span>
+                </li>
+                <li class="text-xl flex justify-between items-center px-4 py-3 hover:bg-[#1D1F23] hover:transition-all duration-500 w-full cursor-pointer mr-6">
+                    <div>
+                        <p class="text-xs opacity-50">Trending</p>
+                        <h3 class="text-sm font-semibold my-1">Babri Masjid</h3>
+                        <p class="text-xs opacity-50">23.4k posts</p>
+                    </div>
+                    <span class="material-symbols-outlined" style="font-size: 25px; opacity: 0.6;">more_horiz</span>
+                </li>
+                <li class="text-xl flex justify-between items-center p-4 hover:bg-[#1D1F23] hover:transition-all duration-500 w-full cursor-pointer mr-6">
+                    <p class="text-base text-[#1D8DD8]">Show more</p>
+                </li>
+            </ul>
+        </div>
+        <div class="trending w-full bg-[#16181c] rounded-3xl mt-4 overflow-hidden">
+          <h3 class="text-lg font-semibold p-4">Who to follow</h3>
+          <ul class="w-full">
+            <li class="text-xl flex justify-between items-center px-4 py-3 hover:bg-[#1D1F23] hover:transition-all duration-500 w-full cursor-pointer mr-6">
+              <div class="flex gap-3">
+                <img src="./Images/hiteshSir.jpg" alt="profile" class="w-9 rounded-full">
+                <div class="mr-7">
+                  <div class="flex gap-1">
+                    <h3 class="text-sm font-semibold hover:underline">Hitesh Choudhary</h3>
+                    <img src="./Images/bluetick.svg" alt="bluetick">
+                  </div>
+                  <p class="text-sm opacity-50">@Hiteshdotcom</p>
+              </div>
+              </div>
+              <button class="py-2 px-3 bg-white text-black rounded-3xl text-sm font-semibold">Follow</button>
+            </li>
+            <li class="text-xl flex justify-between items-center px-4 py-3 hover:bg-[#1D1F23] hover:transition-all duration-500 w-full cursor-pointer mr-6">
+              <div class="flex gap-3">
+                <img src="./Images/francesco.jpg" alt="profile" class="w-9 rounded-full">
+                <div class="mr-7">
+                  <div class="flex gap-1">
+                    <h3 class="text-sm font-semibold hover:underline">Francesco</h3>
+                    <img src="./Images/bluetick.svg" alt="bluetick">
+                  </div>
+                  <p class="text-sm opacity-50">@FrancescoCiull4</p>
+              </div>
+              </div>
+              <button class="py-2 px-3 bg-white text-black rounded-3xl text-sm font-semibold">Follow</button>
+            </li>
+            <li class="text-xl flex justify-between items-center px-4 py-3 hover:bg-[#1D1F23] hover:transition-all duration-500 w-full cursor-pointer mr-6">
+              <div class="flex gap-3">
+                <img src="./Images/shefali.jpg" alt="profile" class="w-9 rounded-full">
+                <div class="mr-7">
+                  <div class="flex gap-1">
+                    <h3 class="text-sm font-semibold hover:underline">Shefali</h3>
+                    <img src="./Images/bluetick.svg" alt="bluetick">
+                  </div>
+                  <p class="text-sm opacity-50">@Shefali__J</p>
+              </div>
+              </div>
+              <button class="py-2 px-3 bg-white text-black rounded-3xl text-sm font-semibold">Follow</button>
+            </li>
+            <li class="text-xl flex justify-between items-center p-4 hover:bg-[#1D1F23] hover:transition-all duration-500 w-full cursor-pointer mr-6">
+              <p class="text-base text-[#1D8DD8]">Show more</p>
+          </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
